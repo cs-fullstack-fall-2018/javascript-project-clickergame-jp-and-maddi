@@ -13,7 +13,7 @@ var sum = 0;
 //this function determines what happens when the clicker is clicked (add 1 for every click)
 function clicker(){
     sum += 1;
-    score.innerHTML = sum;
+   score.innerHTML = sum;
 }
 
 //Allows the click button to increase the HTML of the score.
