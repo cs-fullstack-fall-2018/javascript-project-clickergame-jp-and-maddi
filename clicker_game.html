@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>JP and Maddi Clicker Game</title>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
 </head>
 <body>
 <div>
@@ -12,12 +16,12 @@
     <h2>Score: <span> 0 </span></h2>
 </div>
 <div>
-    <input type="button" value="Click Me +1">
+    <input type="button" value="Click Me +1" id="clicker" onclick="clicker()">
     <input disabled type="button" value="Multiplier" id="multi">
     <input disabled type="button" value="Auto Clicker +1" id="auto">
 </div>
 
 
-
+<script src="JS.js"></script>
 </body>
 </html>
