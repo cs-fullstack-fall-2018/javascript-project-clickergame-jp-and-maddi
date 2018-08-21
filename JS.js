@@ -4,7 +4,10 @@ var sum = 0;
 var buttonReset = document.getElementById('reset');
 var multiButton = document.getElementById('multi');
 var autoButton = document.getElementById("auto");
-
+var counter = function counter() {
+    sum ++;
+    score.innerHTML = sum;
+};
 
 //this function determines what happens when the clicker is clicked (add 1 for every click)
 //Allows the click button to increase the HTML of the score.
@@ -32,6 +35,7 @@ function resetButton() {
     document.getElementById("auto").disabled = true;
 }
 
+
 buttonReset.addEventListener('click', resetButton);
 
 //On Click the button adds +10 to the score
@@ -49,10 +53,7 @@ function autoClicker() {
     if(sum>=10) {
         setInterval(counter, 1000);
     }
+
 }
  autoButton.addEventListener('click', autoClicker);
 
-function counter() {
-    sum++;
-    score.innerHTML = sum;
-}
