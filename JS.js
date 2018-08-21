@@ -3,16 +3,7 @@ var clickButton = document.getElementById("clicker");
 var sum = 0;
 var buttonReset = document.getElementById('reset');
 var multiButton = document.getElementById('multi');
-
-
-
-
-//
-// //this function resets the game and starts at the beginning
-// function reset(){
-//     document.getElementById("multi").reset();
-//     document.getElementById("auto").reset();
-// }
+var autoButton = document.getElementById("auto");
 
 
 //this function determines what happens when the clicker is clicked (add 1 for every click)
@@ -22,6 +13,9 @@ function clicker(){
    score.innerHTML = sum;
     if(sum >= 5){
         document.getElementById("multi").disabled = false;
+    }
+    if (sum >= 10){
+        document.getElementById("auto").disabled = false;
     }
 }
 
@@ -34,13 +28,19 @@ function resetButton() {
     var newScore = 0;
     sum = newScore;
     score.innerHTML = sum;
+    document.getElementById("multi").disabled = true;
+    document.getElementById("auto").disabled = true;
 }
+
 buttonReset.addEventListener('click', resetButton);
 
 //On Click the button adds +10 to the score
 function multiClick() {
     sum += 10;
     score.innerHTML = sum;
+    if (sum >= 10){
+        document.getElementById("auto").disabled = false;
+    }
 }
 multiButton.addEventListener("click", multiClick);
 
