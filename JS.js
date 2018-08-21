@@ -49,10 +49,10 @@ function autoClicker() {
     if(sum>=10) {
         setInterval(counter, 1000);
     }
+    function counter() {
+        sum++;
+        score.innerHTML = sum;
+    }
 }
  autoButton.addEventListener('click', autoClicker);
 
-function counter() {
-    sum++;
-    score.innerHTML = sum;
-}
