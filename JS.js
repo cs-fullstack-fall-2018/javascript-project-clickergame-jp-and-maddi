@@ -2,7 +2,8 @@ var score = document.getElementById('counter');
 var clickButton = document.getElementById("clicker");
 var sum = 0;
 var buttonReset = document.getElementById('reset');
-var multicliker = document.getElementById("multi");
+var multiButton = document.getElementById('multi');
+
 
 
 
@@ -14,7 +15,8 @@ var multicliker = document.getElementById("multi");
 // }
 
 
-//this function determines what happens when the clicker is clicked (add 1 for every click) and disables multiplier button
+//this function determines what happens when the clicker is clicked (add 1 for every click)
+//Allows the click button to increase the HTML of the score.
 function clicker(){
     sum += 1;
    score.innerHTML = sum;
@@ -35,4 +37,11 @@ function resetButton() {
 }
 buttonReset.addEventListener('click', resetButton);
 
-//function for the multiplier button to add 5 for each click
+//On Click the button adds +10 to the score
+function multiClick() {
+    sum += 10;
+    score.innerHTML = sum;
+}
+multiButton.addEventListener("click", multiClick);
+
+
