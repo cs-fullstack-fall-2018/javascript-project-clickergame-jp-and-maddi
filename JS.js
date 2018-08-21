@@ -44,4 +44,15 @@ function multiClick() {
 }
 multiButton.addEventListener("click", multiClick);
 
+//On click autoClicker will continuosly increases score.
+function autoClicker() {
+    if(sum>=10) {
+        setInterval(counter, 1000);
+    }
+}
+ autoButton.addEventListener('click', autoClicker);
 
+function counter() {
+    sum++;
+    score.innerHTML = sum;
+}
