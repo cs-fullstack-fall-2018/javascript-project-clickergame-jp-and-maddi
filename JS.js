@@ -4,6 +4,7 @@ var sum = 0;
 var buttonReset = document.getElementById('reset');
 var multiButton = document.getElementById('multi');
 var autoButton = document.getElementById("auto");
+var set1;
 var counter = function counter() {
     sum ++;
     score.innerHTML = sum;
@@ -33,6 +34,7 @@ function resetButton() {
     score.innerHTML = sum;
     document.getElementById("multi").disabled = true;
     document.getElementById("auto").disabled = true;
+    clearInterval(set1);
 }
 
 
@@ -48,10 +50,10 @@ function multiClick() {
 }
 multiButton.addEventListener("click", multiClick);
 
-//On click autoClicker will continuosly increases score.
+//On click autoClicker will continuously increases score.
 function autoClicker() {
     if(sum>=10) {
-        setInterval(counter, 1000);
+        set1 = setInterval(counter, 1000);
     }
 
 }
