@@ -16,4 +16,10 @@ function clicker(){
     score.innerHTML = sum;
 }
 
+//Allows the click button to increase the HTML of the score.
 clickButton.addEventListener("click", clicker);
+
+function resetButton() {
+    var newScore = 0
+    score = newScore;
+}
